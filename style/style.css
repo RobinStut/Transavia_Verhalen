@@ -21,7 +21,7 @@
 /*Dit zijn de stukjes tekst*/
 
 h1 {
-    font-family: "Nexa-Bold";
+    font-family: "Nexa-Bold", sans-serif;
     margin-bottom: 1rem;
     font-size: 2.375rem;
     color: #00d66c;
@@ -30,7 +30,7 @@ h1 {
 }
 
 h2 {
-    font-family: "Nexa-Bold";
+    font-family: "Nexa-Bold", sans-serif;
     margin-top: 0;
     margin-bottom: .25rem;
     font-size: 1.25rem;
@@ -40,7 +40,7 @@ h2 {
 }
 
 h3 {
-    font-family: "Nexa-Bold";
+    font-family: "Nexa-Bold", sans-serif;
     margin-top: 0;
     margin-bottom: 1rem;
     font-size: 2.375rem;
@@ -50,7 +50,7 @@ h3 {
 }
 
 h4 {
-    font-family: "Nexa-Bold";
+    font-family: "Nexa-Bold", sans-serif;
     margin-top: 0;
     margin-bottom: .25rem;
     font-size: 1.5rem;
@@ -60,7 +60,7 @@ h4 {
 }
 
 h5 {
-    font-family: "Nexa-Bold";
+    font-family: "Nexa-Bold", sans-serif;
     margin-top: 0;
     margin-bottom: .25rem;
     font-size: 1.25rem;
@@ -78,7 +78,7 @@ a {
 /*Hier begint de indeling van het HTML bestand*/
 
 body {
-    font-family: "NexaRegular";
+    font-family: "NexaRegular", sans-serif;
     margin: 0;
     background-color: white;
 }
@@ -243,7 +243,7 @@ legend {
     display: block;
     margin-left: 4em;
     margin-right: auto;
-    font-family: "Nexa-Bold";
+    font-family: "Nexa-Bold" , sans-serif;
     margin-top: 0;
     margin-bottom: .25rem;
     font-size: 1.5rem;
@@ -256,7 +256,7 @@ legend {
 section legend {
     display: block;
     margin-left: 0;
-    font-family: "Nexa-Bold";
+    font-family: "Nexa-Bold", sans-serif;
     margin-top: 0;
     margin-bottom: .25rem;
     font-size: 1.5rem;
@@ -331,14 +331,14 @@ input {
     border: .0625rem solid #91a3b7;
     border-radius: 0.5rem;
     margin-bottom: 1.5em;
-    font-family: "NexaRegular";
+    font-family: "NexaRegular", sans-serif;
     font-size: 1em;
     background-color: white;
     padding-left: 1em;
 }
 
 input[type=checkbox]:checked {
-    background-color: red;
+    background-color: #ff3268;
 }
 
 section input {
@@ -347,7 +347,7 @@ section input {
     height: 2.5rem;
     width: 100%;
     margin-bottom: 1.5em;
-    font-family: "NexaRegular";
+    font-family: "NexaRegular", sans-serif;
     font-size: 1em;
     background-color: white;
     padding-left: 1em;
