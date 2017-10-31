@@ -300,10 +300,17 @@ section form {
     background-color: white;
     margin-left: 30%;
     margin-right: 30%;
-    width: 40%;
+    width: auto;
     height: auto;
     padding: 1em;
     border-radius: .75em;
+}
+
+@media (max-width:46.25em){
+    section form {
+        margin-left: 10%;
+        margin-right: 10%;
+}
 }
 
 label {
