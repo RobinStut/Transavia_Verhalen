@@ -1,0 +1,25 @@
+console.log("Test");
+
+//Aside!
+var asideKnop = document.getElementById("asideknop");
+var asidecheck1 = document.getElementsByClassName("aside");
+var optie = 0;
+//asideTrigger.addEventListener("onclick", asideChange);
+
+function asideChange(){
+
+if (optie == 0){
+    document.getElementById("aside").classList.remove("normal");
+    document.getElementById("aside").classList.add("aside");
+    console.log("Aside toegevoegd")
+    optie = 1;
+    console.log("optie is nu " + optie);
+}
+
+else if (optie == 1){
+    document.getElementById("aside").classList.remove("aside");
+    document.getElementById("aside").classList.add("normal");
+    optie = 0;
+    console.log("optie is nu " + optie);
+}
+}

@@ -1,0 +1,1488 @@
+@font-face {
+    font-family: "Nexa-Bold";
+    src: url("style/Nexa/Nexa-Bold.otf");
+}
+
+@font-face {
+    font-family: "NexaRegular";
+    src: url("style/Nexa/Nexa-Regular.otf");
+}
+
+@font-face {
+    font-family: "Nexa-Light";
+    src: url("style/Nexa/Nexa-Light.otf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*Dit zijn de stukjes tekst*/
+
+h1 {
+    font-family: "Nexa-Bold";
+    margin-bottom: 1rem;
+    font-size: 2.375rem;
+    color: #00d66c;
+    line-height: 2.875rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: "Nexa-Bold";
+    margin-top: 0;
+    margin-bottom: .25rem;
+    font-size: 1.25rem;
+    color: #00d66c;
+    line-height: 1.625rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: "Nexa-Bold";
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 2.375rem;
+    color: #00d66c;
+    line-height: 2.5rem;
+    font-weight: bold;
+}
+
+h4 {
+    font-family: "Nexa-Bold";
+    margin-top: 0;
+    margin-bottom: .25rem;
+    font-size: 1.5rem;
+    color: #00d66c;
+    line-height: 1.875rem;
+    font-weight: bold;
+}
+
+h5 {
+    font-family: "Nexa-Bold";
+    margin-top: 0;
+    margin-bottom: .25rem;
+    font-size: 1.25rem;
+    color: #00d66c;
+    line-height: 1.625rem;
+    font-weight: bold;
+}
+
+a {
+    color: #2800a0;
+    text-decoration: none;
+}
+
+
+/*Hier begint de indeling van het HTML bestand*/
+
+body {
+    font-family: "NexaRegular";
+    margin: 0;
+    background-color: white;
+}
+
+body header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0.3125em 0.625em 0 rgba(0, 0, 0, .15);
+    padding: .5em 1em;
+    height: 3.25em;
+    background-color: white;
+    display: grid;
+}
+
+nav {
+    z-index: 10000;
+    display: grid;
+    width: auto;
+    height: auto;
+    float: right;
+    position: fixed;
+    right: 1em;
+}
+
+span {
+    width: 1.5em;
+    height: .3em;
+    margin-bottom: .2em;
+    background-color: #00d66c;
+}
+
+
+/*Inlog formulier*/
+
+.active label {
+    display: inline-flex;
+    animation-name: filtershow;
+    animation-duration: .7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.active input {
+    display: inline-flex;
+    animation-name: filtershow;
+    animation-duration: .7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.inactive label {
+    display: none;
+}
+
+.inactive input {
+    display: none;
+}
+
+.inactive fieldset {
+    margin-top: -1em;
+}
+
+
+/*test*/
+
+div {
+    float: left;
+}
+
+.inactive fieldset legend {
+    display: block;
+    background-color: #00d66c;
+    padding: 1em;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: .75em;
+    border-bottom-right-radius: .75em;
+    margin-left: 1em;
+    color: white;
+    width: 12em;
+    ;
+    animation-name: filterlegend1;
+    animation-duration: .7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transition: all ease-in-out .2s;
+}
+
+@media (max-width:35em) {
+    .inactive fieldset legend {
+        animation-name: none;
+    }
+    .active fieldset legend {
+        animation-name: none;
+    }
+}
+
+.inactive {
+    background: white;
+}
+
+.active {
+    background-color: #00d66c;
+    border-radius: 0;
+}
+
+.active fieldset legend {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    color: white;
+    animation-name: filterlegend2;
+    animation-duration: .7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transition: all ease-in-out .2s;
+}
+
+@keyframes filtershow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes filterlegend2 {
+    0% {
+        margin-left: 4em;
+    }
+    100% {
+        margin-left: 1em;
+    }
+}
+
+@keyframes filterlegend1 {
+    0% {
+        margin-left: 1em;
+    }
+    100% {
+        margin-left: 4em;
+    }
+}
+
+@keyframes filterlegend3 {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+legend {
+    display: block;
+    margin-left: 4em;
+    margin-right: auto;
+    font-family: "Nexa-Bold";
+    margin-top: 0;
+    margin-bottom: .25rem;
+    font-size: 1.5rem;
+    color: #2800a0;
+    line-height: 1.875rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+section legend {
+    display: block;
+    margin-left: 0;
+    font-family: "Nexa-Bold";
+    margin-top: 0;
+    margin-bottom: .25rem;
+    font-size: 1.5rem;
+    color: #2800a0;
+    line-height: 1.875rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+fieldset {
+    border: none;
+    padding-left: 1em;
+    padding-right: 2em;
+    width: 100%;
+}
+
+section fieldset {
+    border: none;
+    padding-left: 1em;
+    padding-right: 2em;
+    display: block;
+}
+
+form {
+    margin-top: 3.25em;
+    transition: all ease-in-out 200ms;
+    width: 100%;
+    height: auto;
+    padding: 1em;
+    border-radius: .75em;
+    display: flex;
+    background-color: #00d66c;
+}
+
+section form {
+    margin-top: 6em;
+    transition: all ease-in-out 200ms;
+    display: -webkit-inline-box;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: white;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+    height: auto;
+    padding: 1em;
+    border-radius: .75em;
+}
+
+label {
+    font-weight: bold;
+    color: white;
+    display: inline;
+    padding-left: 6em;
+}
+
+section label {
+    font-weight: bold;
+    color: #202020;
+    display: inline;
+    padding-left: 0;
+}
+
+input {
+    border: .0625rem solid #91a3b7;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5em;
+    font-family: "NexaRegular";
+    font-size: 1em;
+    background-color: white;
+    padding-left: 1em;
+}
+
+input[type=checkbox]:checked {
+    background-color: red;
+}
+
+section input {
+    border: .0625rem solid #91a3b7;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    width: 100%;
+    margin-bottom: 1.5em;
+    font-family: "NexaRegular";
+    font-size: 1em;
+    background-color: white;
+    padding-left: 1em;
+}
+
+fieldset a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #2800a0;
+}
+
+body section form fieldset a:first-of-type{
+padding-right: 1em;
+}
+
+fieldset button {
+    background-color: #ff3268;
+    box-shadow: inset 0 -0.1875em 0.0625em #ca2b55;
+    margin: 0;
+    padding: .4375em 1.5em .5625em;
+    position: relative;
+    border: 0;
+    font-weight: bold;
+    line-height: 1.5;
+    cursor: pointer;
+    border-radius: 1.25em;
+    min-height: 1.5rem;
+    min-width: 1.5rem;
+    color: white;
+    font-size: 1em;
+    float: right;
+}
+
+.formHide {
+    display: none;
+}
+
+.formShow {
+    display: inherit;
+}
+
+
+/*content*/
+
+main {
+    padding-top: .5em;
+}
+
+main h1 {
+    width: 100%;
+    text-align: center;
+    padding-top: 1em;
+    margin-bottom: 0;
+    font-size: 3em;
+    color: #ff3268;
+}
+
+section {
+    background-color: #00d66c;
+    width: 100%;
+    height: 50em;
+}
+
+main section {
+    padding: .75em 1em;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+main section article {
+    width: auto;
+    margin-top: 3.5em;
+}
+
+main section section article {
+    width: 28em;
+    margin-top: 0;
+}
+
+article {
+    margin-left: .5em;
+    margin-right: .5em;
+    padding-bottom: 1em;
+    border-radius: .75rem;
+    border: .0625rem solid #ccc;
+    width: 18em;
+    min-width: 18em;
+    height: auto;
+    position: relative;
+    transition: all ease-in-out 200ms;
+}
+
+p {
+    color: #606060;
+}
+
+
+/*Hier gebruik ik Pseudo om onderdelen aan te passen*/
+
+section article header {
+    position: relative;
+    width: 100%;
+    padding: .0 0;
+    height: auto;
+}
+
+article header img {
+    max-width: 100%;
+    display: block;
+    border-top-left-radius: .75rem;
+    border-top-right-radius: .75rem;
+    object-fit: cover;
+    width: 100%;
+}
+
+article header img:nth-child(1) {
+    width: 100%;
+    height: auto;
+}
+
+section h1 {
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+    color: #00d66c;
+}
+
+section section {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    overflow-y: scroll;
+}
+
+section article p {
+    margin-left: .75em;
+    margin-right: .75em;
+    margin-top: .75em;
+    max-width: 20em;
+}
+
+section article a {
+    color: white;
+    background-color: #00d66c;
+    box-shadow: inset 0 -0.1875rem 0.0625rem #1e9162;
+    margin-left: .75em;
+    margin-right: .75em;
+    border: 0;
+    border-radius: 1.25em;
+    width: 24em;
+    font-weight: bold;
+    line-height: 1.5;
+    font-size: .75em;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: .4375em;
+    padding-bottom: .5625em;
+}
+
+section article h4 {
+    margin: .75em;
+    position: absolute;
+    color: white;
+}
+
+aside {
+    background-color: #f3e5d8;
+    width: auto;
+    height: auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    /*transform: rotate(-90deg);*/
+    position: fixed;
+    right: 0;
+    top: 50%;
+    border-top-left-radius: .75rem;
+    border-bottom-left-radius: .75rem;
+    transition: all ease-in-out 200ms;
+}
+
+aside p {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    transform: rotate(-90deg);
+    display: none;
+}
+
+aside p:nth-child(1) {
+    display: block;
+}
+
+.aside p:nth-child(3) {
+    display: block;
+    top: 20em;
+    animation-name: opacity;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.aside section:nth-child(4) {
+    top: 42em;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.normal section {
+    display: none;
+}
+
+.beoordelingnormal section {
+    display: none;
+}
+
+.aside section {
+    display: inherit;
+    height: auto;
+}
+
+.aside section div {
+    opacity: 1;
+    width: 4em;
+    height: 4em;
+    -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background-color: #606060;
+}
+
+.aside section .stargekozen {
+    background-color: #f28c37;
+}
+
+
+/*Dit gebruik ik om de scrollbar weg te krijgen want die zien er raar uit anders
+gevonden op: https://stackoverflow.com/questions/3296644/hiding-the-scrollbar-on-an-html-page
+*/
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.aside {
+    display: flex;
+    top: 3.25em;
+    width: 20em;
+    border-radius: 0;
+    height: 93%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.aside p {
+    transform: rotate(0deg);
+    text-align: center;
+    width: 20rem;
+    font-size: 1.5rem;
+    margin-top: 0;
+    position: fixed;
+    top: 3.25rem;
+    right: 0;
+    background-color: #f3e5d8;
+    height: 2em;
+    padding: .5em;
+    z-index: 10;
+    display: block;
+}
+
+.aside section {
+    position: absolute;
+    top: 3em;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0;
+}
+
+.aside section:nth-child(2) {
+    top: 4em;
+}
+
+.aside section:nth-child(3) {
+    top: 23em;
+}
+
+.aside section img {
+    height: 19em;
+}
+
+.aside section section {
+    margin-left: 1em;
+    margin-right: 1em;
+    top: 2em;
+    width: 16em;
+    border-radius: .75rem;
+}
+
+.aside section article h4 {
+    position: unset;
+    color: #2800a0;
+    text-align: center;
+}
+
+.aside section article h5 {
+    margin-top: .5em;
+    color: #ff3268;
+    text-align: left;
+}
+
+.aside section article {
+    position: absolute;
+    top: 1em;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-left: 1em;
+    margin-right: 1em;
+    text-align: left;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.aside section article a {
+    width: 90%;
+    margin-top: 1em;
+}
+
+footer {
+    margin-left: 2em;
+    margin-right: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    bottom: 0;
+    width: auto;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 0;
+}
+
+footer ul li {
+    list-style-type: none;
+    padding: 1em;
+}
+
+header a {
+    position: absolute;
+    top: .6em;
+    height: 2em;
+    width: 2em;
+    border-radius: 100%;
+    background-color: #00d66c;
+    padding: 0;
+}
+
+header a:nth-child(1) {
+    position: absolute;
+    top: .6em;
+    height: 2em;
+    width: 2em;
+    border-radius: 100%;
+    padding: 0;
+    margin-left: .5em;
+}
+
+header a:nth-child(2) {
+    right: 1em;
+}
+
+header a:nth-child(3) {
+    right: 3.5em;
+}
+
+header a:nth-child(3) img {
+    width: 2em;
+    height: 2em;
+}
+
+header a:nth-child(2) img {
+    width: 2em;
+    height: 2em;
+}
+
+header img:nth-child(1) {
+    width: auto;
+    height: auto;
+}
+
+@media (max-width:35em) {
+    aside {
+        top: 80%;
+    }
+}
+
+@media (min-width: 60em) {
+    main section section article {
+        min-width: 28em;
+    }
+}
+
+
+/*DOWNLOAD ANIMATIE*/
+
+.download {
+    animation-name: div;
+    animation-delay: 13.3s;
+    animation-duration: .7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transition: all .7s ease-in-out;
+}
+
+div h2 {
+    font-family: sans-serif;
+    font-size: 100%;
+    color: white;
+    position: absolute;
+    top: 10%;
+    padding-left: 10%;
+}
+
+div h2:nth-child(4) {
+    left: -120%;
+}
+
+section .download h2:nth-child(1) {
+    left: 0;
+    animation-name: h2-1;
+    animation-duration: .7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.download:nth-child(4) {
+    animation-name: h2-2;
+    animation-duration: .7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 13.3s;
+}
+
+
+/*
+div:nth-child(3) {
+    font-family: sans-serif;
+    position: absolute;
+    left: 10%;
+    top: -10%;
+    font-size: .7em;
+    color: white;
+    opacity: 0;
+}
+*/
+
+.download:nth-child(3) {
+    animation-name: p3;
+    animation-duration: 14s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+div p:nth-child(2) {
+    font-family: sans-serif;
+    position: absolute;
+    left: -120%;
+    top: -10%;
+    font-size: .7em;
+    color: white;
+}
+
+div p:nth-child(3) {
+    font-family: sans-serif;
+    position: absolute;
+    padding-left: -120%;
+    top: -10%;
+    opacity: 0;
+    font-size: .7em;
+    color: white;
+}
+
+.download h2:nth-child(4) {
+    animation-name: h2-2;
+    animation-duration: .7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 13.3s;
+}
+
+.download p:nth-child(2) {
+    animation-name: p2;
+    animation-duration: 14s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.download p:nth-child(3) {
+    animation-name: p3;
+    animation-duration: 14s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+div span {
+    position: absolute;
+    top: 55%;
+    left: -90%;
+    display: block;
+    width: 80%;
+    height: 30%;
+    background: #ff3268;
+}
+
+.download span {
+    animation-name: span;
+    animation-duration: 14s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@media (max-width:50em) {
+    .download {
+        width: 100%;
+    }
+}
+
+@keyframes span {
+    0% {
+        top: 55%;
+    }
+    5%,
+    100% {
+        top: 55%;
+        left: 10%;
+    }
+    5%,
+    92% {
+        left: 10%;
+    }
+    100% {
+        left: 110%
+    }
+    80%,
+    100% {
+        background: #00d66c;
+    }
+}
+
+@keyframes p2 {
+    0% {}
+    5%,
+    100% {
+        left: 10%;
+    }
+    0%,
+    80% {
+        opacity: 1;
+    }
+    82%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes p3 {
+    82% {
+        opacity: 0;
+    }
+    84%,
+    100% {
+        opacity: 1;
+    }
+    0%,
+    92% {
+        padding-left: 10%;
+    }
+    100% {
+        padding-left: 110%
+    }
+}
+
+@keyframes h2-1 {
+    0% {
+        padding-left: 10%;
+    }
+    100% {
+        padding-left: 110%;
+    }
+}
+
+@keyframes h2-2 {
+    0% {
+        padding-left: -125%;
+    }
+    100% {
+        padding-left: 125%;
+    }
+}
+
+@keyframes div {
+    0% {
+        background: #2800a0;
+    }
+    100% {
+        background: #ff3268;
+    }
+}
+
+
+/*Verhaal detail pagina*/
+
+main section article header section {
+    background-color: rgba(0, 0, 0, 0);
+    padding-left: .75em;
+    padding-right: .75em;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: -4em;
+    overflow-y: hidden;
+    height: 3em;
+    display: block;
+    opacity: 1;
+}
+
+main section article header section div {
+    position: relative;
+    width: 33%;
+    height: 3em;
+    background: #2800a0;
+    overflow: hidden;
+    transition: all .7s ease-in-out;
+    cursor: pointer;
+}
+
+main section article header section div:nth-child(1) {
+    background-color: #2800a0;
+}
+
+main section article header section div:nth-child(2) {
+    background-color: #00d66c;
+}
+
+main section article header section div:nth-child(3) {
+    background-color: #ff3268;
+}
+
+header a p {
+    opacity: 0;
+}
+
+.popup p {
+    background-color: #ff3268;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 100%;
+    width: 33%;
+    height: 33%;
+    font-size: 93%;
+    text-align: center;
+    padding: 0;
+    margin-top: 0;
+    color: white;
+    line-height: 1em;
+    animation-name: popup;
+    animation-delay: 12s;
+    animation-duration: .2s;
+    animation-timing-function: cubic-bezier(.29, .92, .78, 1.2);
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes popup {
+    0% {
+        opacity: 1;
+        width: 0;
+        height: 0;
+    }
+    100% {
+        width: 33%;
+        height: 33%;
+        opacity: 1;
+    }
+}
+
+
+/*Beoordeling*/
+
+main section article section {
+    justify-content: center;
+    opacity: 0;
+    margin-top: -5.5em;
+    display: none;
+}
+
+#aantalsterren div {
+    opacity: 1;
+    width: 4em;
+    height: 4em;
+    -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background-color: #606060;
+}
+
+.Open {
+    display: flex;
+    animation-name: tonen;
+    background-color: rgba(0, 0, 0, 0);
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#aantalsterren .stargekozen {
+    animation-name: star;
+    background-color: #606060;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes star {
+    0% {
+        background-color: #606060;
+    }
+    100% {
+        background-color: #f28c37;
+    }
+}
+
+@keyframes tonen {
+    0% {
+        margin-top: -5.5em;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+textarea {
+    min-width: 100%;
+    border-bottom-right-radius: .5em;
+    border-bottom-left-radius: .5em;
+    border: .0625rem solid #91a3b7;
+}
+
+main section article section form {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    height: auto;
+}
+
+
+/*Beoordeling*/
+
+.beoordeling section {
+    display: inherit;
+}
+
+.beoordeling section div {
+    opacity: 1;
+    width: 4em;
+    height: 4em;
+    -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background-color: #606060;
+}
+
+.beoordeling section .stargekozen {
+    background-color: #f28c37;
+}
+
+.beoordeling {
+    display: flex;
+    top: 3.25em;
+    width: 20em;
+    border-radius: 0;
+    height: 93%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.beoordeling p {
+    transform: rotate(0deg);
+    text-align: center;
+    width: 20rem;
+    font-size: 1.5rem;
+    margin-top: 0;
+    position: fixed;
+    top: 3.25rem;
+    right: 0;
+    background-color: #f3e5d8;
+    height: 2em;
+    padding: .5em;
+    z-index: 10;
+    display: block;
+}
+
+.beoordeling p:nth-child(3) {
+    display: block;
+    top: 20em;
+    animation-name: opacity;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.beoordeling section {
+    position: absolute;
+    top: 3em;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0;
+}
+
+.beoordeling section:nth-child(2) {
+    top: 4em;
+}
+
+.beoordeling section:nth-child(3) {
+    top: 41em;
+}
+
+.beoordeling p:nth-child(3) {
+    display: block;
+    position: absolute;
+    top: 6em;
+    animation-name: opacity;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.beoordeling section:nth-child(4) {
+    top: 11em;
+}
+
+.beoordeling section:nth-child(5) {
+    top: 19em;
+}
+
+.beoordeling section:nth-child(6) {
+    top: 26em;
+}
+
+.beoordeling section:nth-child(7) {
+    top: 34em;
+}
+
+.beoordeling section img {
+    height: 19em;
+}
+
+.beoordeling section section {
+    margin-left: 1em;
+    margin-right: 1em;
+    top: 2em;
+    width: 16em;
+    border-radius: .75rem;
+}
+
+.beoordeling section article h4 {
+    position: unset;
+    color: #2800a0;
+    text-align: center;
+}
+
+.beoordeling section article h5 {
+    margin-top: .5em;
+    color: #ff3268;
+    text-align: left;
+}
+
+.beoordeling section article {
+    position: absolute;
+    top: 1em;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-left: 1em;
+    margin-right: 1em;
+    text-align: left;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.beoordeling section article a {
+    width: 90%;
+    margin-top: 1em;
+}
+
+
+/*Account*/
+
+.account {
+    margin-top: 3.25em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f3e5d8;
+}
+
+.account section:nth-child(1) {
+    background-color: white;
+    width: 30em;
+    height: 18em;
+    margin: 2em;
+    border-radius: .5em;
+}
+
+.account section:nth-child(2) {
+    background-color: white;
+    width: 30em;
+    height: auto;
+    margin: 2em;
+    border-radius: .5em;
+    overflow: hidden;
+}
+
+.account section header {
+    background-color: #00d66c;
+    position: absolute;
+    padding: 0;
+    left: 0;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-top-right-radius: .5em;
+    border-top-left-radius: .5em;
+    box-shadow: none;
+}
+
+.account section header img {
+    width: auto;
+    height: 100%;
+    border-radius: 100%;
+    margin-top: 4%;
+}
+
+.account section p:nth-child(2) {
+    margin-top: 10em;
+    font-weight: bold;
+}
+
+.account section p {
+    margin-top: -.75em;
+}
+
+.account section:nth-child(2) section {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.account section:nth-child(2) span {
+    width: 1.5em;
+    height: 1.5em;
+    margin-bottom: auto;
+    background-color: #00d66c;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    line-height: 1.75em;
+    font-size: 2em;
+    color: white;
+}
+
+.account section:nth-child(2) p {
+    margin-top: 0;
+    line-height: 3em;
+}
+
+.account section section:nth-child(2) a {
+    line-height: 3em;
+}
+
+.account section section:nth-child(3) a {
+    line-height: 3em;
+}
+
+.account span {
+    background-color: red;
+}
+
+.account span a {
+    line-height: 1.75em;
+    color: #202020;
+}
+
+.account #toevoegen span {
+    background-color: #f3e5d8;
+    color: #202020;
+    line-height: 1.75em;
+}
+
+.account .groepuitbreiden #toevoegen {
+    display: none;
+}
+
+.groepuitbreiden {
+    background-color: white;
+    display: block;
+}
+
+.groepuitbreiden:nth-child(1) {
+    animation-name: groep;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.groepuitbreiden:nth-child(2) {
+    animation-name: groep;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.groepuitbreiden:nth-child(3) {
+    animation-name: groep;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.groep section:nth-child(4) {
+    display: block;
+}
+
+#toevoegenstap2 form {
+    margin: 0;
+    width: 100%;
+}
+
+.toevoegennormaal {
+    display: none;
+}
+
+.toevoegenactive {
+    display: block;
+/*    opacity: 1;*/
+/*    animation-name: toevoegen;*/
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards
+}
+/*
+
+@keyframes toevoegen {
+    0% {
+       margin-top: ;
+    }
+    100% {
+        margin-top: ;
+    }
+}
+*/
+
+.toevoegenactive form:nth-child(1) {
+    animation-name: none;
+}
+
+.toevoegenactive fieldset:nth-child(1) {
+    animation-name: none;
+}
+
+.toevoegenactive legend:nth-child(1) {
+    animation-name: none;
+}
+
+.toevoegenactive label:nth-child(2) {
+    animation-name: none;
+}
+
+.toevoegenactive input:nth-child(3) {
+    animation-name: none;
+}
+
+.groepuitbreiden :nth-child(1) {
+    animation-name: omhoog;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards
+}
+
+@keyframes omhoog{
+    0%{
+    margin-top: 0;
+}
+    100%{
+    margin-top: -7em;
+}
+}
+
+.groepuitbreidenterug :nth-child(1) {
+    animation-name: omlaag;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes omlaag{
+    0%{
+    margin-top: -7em;
+}
+    100%{
+    margin-top: 0;
+}
+}

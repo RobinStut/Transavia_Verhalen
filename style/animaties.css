@@ -1,0 +1,286 @@
+/*DOWNLOAD ANIMATIE*/
+div{
+position: relative;
+width: 33%;
+height: 3em;
+background: #2800a0;
+overflow: hidden;
+transition:all .7s ease-in-out;
+}
+
+.download{
+animation-name: div;
+animation-delay: 13.3s;
+animation-duration: .7s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+transition:all .7s ease-in-out;
+}
+
+div h2{
+font-family: sans-serif;
+color: white;
+position: absolute;
+top: -30%;
+left: 10%;
+}
+
+div h2:nth-child(4){
+left: -90%;
+}
+
+.download :nth-child(1){
+left: 10%;
+animation-name: h2-1;
+animation-duration: .7s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+}
+
+.download :nth-child(4){
+animation-name: h2-2;
+animation-duration: .7s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+animation-delay: 13.3s;
+}
+
+div :nth-child(3){
+font-family: sans-serif;
+position: absolute;
+left: 10%;
+top: -10%;
+font-size: .7em;
+color: white;
+opacity: 0;
+}
+
+.download :nth-child(3){
+animation-name: p3;
+animation-duration: 14s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+}
+
+
+div p:nth-child(2){
+font-family: sans-serif;
+position: absolute;
+left: -90%;
+top: -10%;
+font-size: .7em;
+color: white;
+}
+
+.download p:nth-child(2){
+animation-name: p2;
+animation-duration: 14s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+}
+
+div span{
+position: absolute;
+top: 55%;
+left: -90%;
+display: block;
+width: 80%;
+height: 30%;
+background: #ff3268;
+}
+
+.download span{
+animation-name: span;
+animation-duration: 14s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+}
+
+@media (max-width:50em){
+    .download{
+    width: 100%;
+}
+}
+
+@keyframes span{
+    0% {
+    top: 55%;
+}
+    5%, 100% {
+    top: 55%;
+    left: 10%;
+}
+    5%,92%{
+    left: 10%;
+}
+    100%{
+    left: 110%
+}
+    80%, 100%{
+    background: #00d66c;
+}
+}
+
+@keyframes p2{
+    0% {
+}
+    5%, 100% {
+    left: 10%;
+}
+    0%, 80%{
+    opacity: 1;
+}
+    82%, 100%{
+    opacity: 0;
+}
+}
+
+@keyframes p3{
+    82%{
+    opacity: 0;
+}
+    84%,100% {
+    opacity: 1;
+}
+    0%,92%{
+    left: 10%;
+}
+    100%{
+    left: 110%
+}
+}
+
+@keyframes h2-1{
+    0% {
+    left: 10%;
+}
+    100% {
+    margin-left: 110%;
+}
+}
+
+@keyframes h2-2{
+    0% {
+    left: -90%;
+}
+    100% {
+    margin-left: 97%;
+}
+}
+
+@keyframes div{
+    0% {
+    background: #2800a0;
+}
+    100%{
+    background: #ff3268;
+}
+}
+/*BOEKENKAST ANIMATIE*/
+section{
+position: relative;
+border-radius: 100%;
+background-color: #00d66c;
+width: 10em;
+height: 10em;
+}
+
+section img{
+width: 10em;
+height: 10em;
+}
+
+section p{
+opacity: 0;
+}
+
+.popup p{
+background-color: #ff3268;
+position: absolute;
+top: 0;
+right: 0;
+border-radius: 100%;
+width: 33%;
+height: 33%;
+font-size: 100%;
+text-align: center;
+padding: 0;
+margin-top: 0em;
+color: white;
+line-height: 1em;
+animation-name: popup;
+animation-delay: 12s;
+animation-duration: .2ss;
+animation-timing-function: cubic-bezier(.29,.92,.78,1.2);
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+opacity: 0;
+}
+
+@keyframes popup{
+    0%{
+    opacity: 1;
+    width: 0%;
+    height: 0%;
+}
+    100%{
+    width: 33%;
+    height: 33%;
+    opacity: 1;
+}
+
+}
+
+
+
+/*Beoordeling*/
+
+.star{
+opacity: 0;
+}
+
+.beoordeelOpen .star{
+    opacity: 1;
+    background: grey;
+    float: left;
+    width: 4em;
+    height: 4em;
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+#aantalsterren{
+float: left;
+width: 20em;
+background: white;
+display: flex;
+}
+
+.star1:nth-child(1){
+background-color: #f28c37;
+}
+
+.star2:nth-child(1){
+background-color: #f28c37;
+}
+
+.star2:nth-child(2){
+background-color: #f28c37;
+}
+
+
+/*Verhaal detail pagina*/
+
+main section article header section{
+background-color: rgba(0,0,0,0);
+padding-left: .75em;
+padding-right: .75em;
+margin-top: -3em;
+overflow-y: unset;
+}

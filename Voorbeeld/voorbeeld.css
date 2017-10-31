@@ -1,0 +1,29 @@
+div {
+    width: 4em;
+    height: 4em;
+    background-color: blue;
+    animation-name: Willekeurigenaam;
+    /*  na hoeveel seconden de animatie begint  */
+    animation-delay: .5s;
+    /*    Hoelang de animatie duurt*/
+    animation-duration: 10s;
+    /*    Op welke mannier er geanimeerd wordt*/
+    animation-timing-function: ease-in-out;
+    /*    Hoevaak de animatie afspeelt*/
+    animation-iteration-count: 1;
+    /*Dit zorgt ervoor dat hij aan het eind stil staat, dus dat ie niet terug springt naar het begin.*/
+    animation-fill-mode: forwards;
+}
+
+@keyframes Willekeurigenaam {
+    0% {
+    background-color: blue;
+}
+    10% {    background-color: pink;}
+    20% {    background-color: red;}
+    30% {    background-color: green;}
+/*Je kan hier ook aangeven vanaf hoeveel procent tot hoeveel procent hij de waarde gebruikt*/
+    40%, 80% {    background-color: orange;}
+    90% {    background-color: yellow;}
+    100% {    background-color: grey;}
+}

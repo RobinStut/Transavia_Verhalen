@@ -1,0 +1,29 @@
+section img:nth-child(1){
+display: none;
+}
+
+section img:nth-child(2){
+display: none;
+}
+
+section img:nth-child(3){
+display: none;
+}
+
+@media (min-width:78.125em){
+section img:nth-child(1){
+display: block;
+}
+}
+
+@media only screen and (min-width: 63.75em) and (max-width: 78.125em){
+section img:nth-child(2){
+display: block;
+}
+}
+
+@media (max-width:63.75em){
+section img:nth-child(3){
+display: block;
+}
+}
